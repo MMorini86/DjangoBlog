@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="post">
+    <h3>Author: {{ post.author}} <br>
+    Title: {{post.title}} <br>
+    Date: {{post.created_date}} <p>
+    <p>Message: <br>{{post.body | linebreaks}}</p></h3>
+</div>
+<a href="{% url 'blog:index' %}"> Come back to Index</a>
+{% endblock content %}
